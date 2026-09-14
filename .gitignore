@@ -1,0 +1,29 @@
+# Virtual environment
+my_env/
+
+# VS Code
+.vscode/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Face embeddings
+data/embeddings/
+
+# Attendance records
+data/attendance/
+
+# Enrolled face images
+data/enrolled_faces/
+
+# YOLO generated files
+models/runs/
+
+# Python environment files
+*.pyd
+*.so
+
+# OS files
+.DS_Store
+Thumbs.db
