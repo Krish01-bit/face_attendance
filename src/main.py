@@ -2,7 +2,7 @@ import cv2
 from ultralytics import YOLO
 from attendance.attendance_manager import AttendanceManager
 from recognition.recognizer import FaceRecognizer
-
+from recognition.enrollment import update_embeddings
 
 MODEL_PATH = "models/yolov11n-face.pt"
 
@@ -11,6 +11,8 @@ REQUIRED_CONFIRMATIONS = 3
 
 def main():
     attendance_manager = AttendanceManager()
+    print("\nChecking enrollment data...")
+    update_embeddings()
     model = YOLO(MODEL_PATH)
     recognizer = FaceRecognizer()
 
